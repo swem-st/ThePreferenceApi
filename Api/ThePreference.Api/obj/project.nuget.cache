@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "W8kDwEBB43x9pHIy1F/50KURUwDa/vfFZGLBs/E53pZ0mqNDk3vMN83r4jPL/Vslp5QBmMimsk0ADVe0ys8WIg==",
+  "success": false,
+  "projectFilePath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Api/ThePreference.Api/ThePreference.Api.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project '/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Api/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Api/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

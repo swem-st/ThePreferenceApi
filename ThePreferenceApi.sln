@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Api", "ThePreference.Api\ThePreference.Api.csproj", "{983EF794-149C-4748-B8CD-1C2DEF3BCE72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Api", "Api\ThePreference.Api\ThePreference.Api.csproj", "{983EF794-149C-4748-B8CD-1C2DEF3BCE72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Core.Domain", "ThePreference.Core.Domain\ThePreference.Core.Domain.csproj", "{B2690809-F816-480C-8629-2069974DA423}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Core.Domain", "Core\ThePreference.Core.Domain\ThePreference.Core.Domain.csproj", "{B2690809-F816-480C-8629-2069974DA423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Core.Apllication", "ThePreference.Core.Apllication\ThePreference.Core.Apllication.csproj", "{59020755-38B0-44C6-8CBD-B5C4FA902C68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Core.Apllication", "Core\ThePreference.Core.Apllication\ThePreference.Core.Apllication.csproj", "{59020755-38B0-44C6-8CBD-B5C4FA902C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Infrastructure.Repository", "ThePreference.Infrastructure.Repository\ThePreference.Infrastructure.Repository.csproj", "{0CE0EEF2-C9B1-4CAA-A33D-45FF3C83C543}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Infrastructure.Repository", "Infrastructure\ThePreference.Infrastructure.Repository\ThePreference.Infrastructure.Repository.csproj", "{0CE0EEF2-C9B1-4CAA-A33D-45FF3C83C543}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BA5F42DB-17A6-44D9-871C-472553C20556}"
 EndProject
