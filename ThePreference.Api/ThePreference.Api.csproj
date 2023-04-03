@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>ThePreference.Api</AssemblyName>
+        <RootNamespace>ThePreference.Api</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Config__not last name" />
+      <Folder Include="Helpers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ThePreference.Core.Apllication\ThePreference.Core.Apllication.csproj" />
+    </ItemGroup>
+
+</Project>
