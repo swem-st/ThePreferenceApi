@@ -8,7 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="UseCases-or-Service???"/>
+        <Folder Include="Interfaces\Infrastructure" />
+        <Folder Include="Interfaces\UseCases" />
+        <Folder Include="UseCases-Handler-CHECKNAME" />
+        <Folder Include="UseCases-or-Service???" />
     </ItemGroup>
 
 </Project>

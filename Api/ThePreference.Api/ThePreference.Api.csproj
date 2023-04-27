@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <Folder Include="Config__not last name" />
+      <Folder Include="Controllers\Product" />
       <Folder Include="Helpers" />
     </ItemGroup>
 
