@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Api", "Api\Th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Core.Domain", "Core\ThePreference.Core.Domain\ThePreference.Core.Domain.csproj", "{B2690809-F816-480C-8629-2069974DA423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Core.Apllication", "Core\ThePreference.Core.Apllication\ThePreference.Core.Apllication.csproj", "{59020755-38B0-44C6-8CBD-B5C4FA902C68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Core.Application", "Core\ThePreference.Core.Application\ThePreference.Core.Application.csproj", "{59020755-38B0-44C6-8CBD-B5C4FA902C68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePreference.Infrastructure.Repository", "Infrastructure\ThePreference.Infrastructure.Repository\ThePreference.Infrastructure.Repository.csproj", "{0CE0EEF2-C9B1-4CAA-A33D-45FF3C83C543}"
 EndProject

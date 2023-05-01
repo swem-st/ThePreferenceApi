@@ -10,11 +10,12 @@
 
     <ItemGroup>
       <Folder Include="Config__not last name" />
-      <Folder Include="Controllers\Product" />
       <Folder Include="Helpers" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Core\ThePreference.Core.Application\ThePreference.Core.Application.csproj" />
+      <ProjectReference Include="..\..\Core\ThePreference.Core.Domain\ThePreference.Core.Domain.csproj" />
       <ProjectReference Include="..\ThePreference.Core.Apllication\ThePreference.Core.Apllication.csproj" />
     </ItemGroup>
 

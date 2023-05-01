@@ -4,14 +4,17 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>ThePreference.Aplication</RootNamespace>
+        <RootNamespace>ThePreference.Application</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
+        <Folder Include="DTO\AccountModels\Request" />
+        <Folder Include="DTO\AccountModels\Responce" />
         <Folder Include="Interfaces\Infrastructure" />
         <Folder Include="Interfaces\UseCases" />
-        <Folder Include="UseCases-Handler-CHECKNAME" />
         <Folder Include="UseCases-or-Service???" />
+        <Folder Include="UseCases\Product\Commands" />
+        <Folder Include="UseCases\Product\Queries" />
     </ItemGroup>
 
 </Project>

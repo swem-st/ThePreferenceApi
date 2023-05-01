@@ -1,11 +1,4 @@
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using CleanArchitectureApp.Application.Interfaces.Repositories;
-using FluentValidation;
-
-namespace CleanArchitectureApp.Application.Features.Users.Queries
+namespace ThePreference.Aplication.UseCases_Handler_CHECKNAME.User.Queries
 {
     public class GetUserByIdQueryValidator : AbstractValidator<GetUserByIdQuery>
     {

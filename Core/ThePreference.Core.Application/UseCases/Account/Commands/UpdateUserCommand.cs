@@ -1,14 +1,4 @@
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using AutoMapper;
-using CleanArchitectureApp.Application.Interfaces.Repositories;
-using CleanArchitectureApp.Application.Wrappers;
-using CleanArchitectureApp.Domain;
-using MediatR;
-
-namespace CleanArchitectureApp.Application.Features.Users.Commands
+namespace ThePreference.Aplication.UseCases_Handler_CHECKNAME.User.Commands
 {
     public class UpdateUserCommand : IRequest<Response<Guid>>
     {

@@ -1,12 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ThePreference.Core.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ThePreference.Core.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ThePreference.Core.Application.dll": {}
+        }
+      },
+      "ThePreference.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ThePreference.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ThePreference.Core.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ThePreference.Core.Application/1.0.0": {
+      "type": "project",
+      "path": "../../Core/ThePreference.Core.Application/ThePreference.Core.Application.csproj",
+      "msbuildProject": "../../Core/ThePreference.Core.Application/ThePreference.Core.Application.csproj"
+    },
+    "ThePreference.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Core/ThePreference.Core.Domain/ThePreference.Core.Domain.csproj",
+      "msbuildProject": "../../Core/ThePreference.Core.Domain/ThePreference.Core.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Api/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj"
+      "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Api/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj",
+      "ThePreference.Core.Application >= 1.0.0",
+      "ThePreference.Core.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -37,6 +71,12 @@
           "projectReferences": {
             "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Api/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj": {
               "projectPath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Api/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj"
+            },
+            "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Application/ThePreference.Core.Application.csproj": {
+              "projectPath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Application/ThePreference.Core.Application.csproj"
+            },
+            "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Domain/ThePreference.Core.Domain.csproj": {
+              "projectPath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Domain/ThePreference.Core.Domain.csproj"
             }
           }
         }

@@ -1,14 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using AutoMapper;
-using CleanArchitectureApp.Application.DTOs.User;
-using CleanArchitectureApp.Application.Interfaces.Repositories;
-using CleanArchitectureApp.Application.Wrappers;
-using MediatR;
-
-namespace CleanArchitectureApp.Application.Features.Users.Queries
+namespace ThePreference.Aplication.UseCases_Handler_CHECKNAME.User.Queries
 {
     public class GetAllUsersQuery : IRequest<Response<IEnumerable<UserViewModel>>>
     {

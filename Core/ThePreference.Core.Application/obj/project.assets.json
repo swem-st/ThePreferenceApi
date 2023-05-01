@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj",
-      "projectName": "ThePreference.Core.Apllication",
-      "projectPath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Apllication/ThePreference.Core.Apllication.csproj",
+      "projectUniqueName": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Application/ThePreference.Core.Application.csproj",
+      "projectName": "ThePreference.Core.Application",
+      "projectPath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Application/ThePreference.Core.Application.csproj",
       "packagesPath": "/Users/swem.st/.nuget/packages/",
-      "outputPath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Apllication/obj/",
+      "outputPath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/swem.st/.nuget/NuGet/NuGet.Config"

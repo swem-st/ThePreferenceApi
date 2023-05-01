@@ -1,15 +1,4 @@
-﻿using AutoMapper;
-using CleanArchitectureApp.Application.Interfaces.Repositories;
-using CleanArchitectureApp.Application.Interfaces.Services;
-using CleanArchitectureApp.Application.Wrappers;
-using CleanArchitectureApp.Domain;
-using MediatR;
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace CleanArchitectureApp.Application.Features.Users.Commands
+﻿namespace ThePreference.Aplication.UseCases_Handler_CHECKNAME.User.Commands
 {
     public partial class CreateUserCommand : IRequest<Response<Guid>>
     {
