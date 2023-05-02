@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Xqrk6BP8AOOY83G9TOwxlyP83RTqf/pSpXLyTHHPRF4/rGLkUxBhZ76uw8cl0FaMVxpwEAMW3tDzA8UW6cGQgA==",
+  "dgSpecHash": "VYnogkBhPD/J4ULaEww3N1u0ZxgamEdeEN7oKk2XIdJgx/Pyc5MmGJToHgahEkJUZEzBTMNToGo9x6a+4NW1Lw==",
   "success": true,
   "projectFilePath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Application/ThePreference.Core.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/swem.st/.nuget/packages/mediatr/12.0.1/mediatr.12.0.1.nupkg.sha512",
+    "/Users/swem.st/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/swem.st/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

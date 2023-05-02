@@ -12,9 +12,10 @@
         <Folder Include="DTO\AccountModels\Responce" />
         <Folder Include="Interfaces\Infrastructure" />
         <Folder Include="Interfaces\UseCases" />
-        <Folder Include="UseCases-or-Service???" />
-        <Folder Include="UseCases\Product\Commands" />
-        <Folder Include="UseCases\Product\Queries" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.0.1" />
     </ItemGroup>
 
 </Project>

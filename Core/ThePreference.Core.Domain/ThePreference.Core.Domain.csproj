@@ -7,4 +7,9 @@
         <RootNamespace>ThePreference.Domain</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Account" />
+      <Folder Include="Product" />
+    </ItemGroup>
+
 </Project>
