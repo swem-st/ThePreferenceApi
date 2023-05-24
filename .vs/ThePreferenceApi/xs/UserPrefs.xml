@@ -1,18 +1,43 @@
-﻿<Properties StartupConfiguration="{983EF794-149C-4748-B8CD-1C2DEF3BCE72}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{983EF794-149C-4748-B8CD-1C2DEF3BCE72}|ThePreferenceApi">
+  <MonoDevelop.Ide.ItemProperties.ThePreferenceApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{983EF794-149C-4748-B8CD-1C2DEF3BCE72}" ItemName="ThePreference.Api" ConfigurationId="ThePreferenceApi" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/ThePreference.Infrastructure.Repository/DataAccess/PeopleContext.cs">
+    <Files>
+      <File FileName="Api/ThePreference.Api/Program.cs" />
+      <File FileName="Infrastructure/ThePreference.Infrastructure.Repository/DependencyResolution/ServiceInitializer.cs" />
+      <File FileName="Infrastructure/ThePreference.Infrastructure.Repository/DataAccess/PeopleContext.cs" Line="18" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ThePreferenceApi" expanded="True" />
+          <Node name="ThePreferenceApi" expanded="True">
+            <Node name="Api" expanded="True">
+              <Node name="ThePreference.Api" expanded="True" />
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="ThePreference.Infrastructure.Repository" expanded="True">
+                <Node name="Dependencies" expanded="True" />
+                <Node name="DataAccess" expanded="True">
+                  <Node name="PeopleContext.cs" selected="True" />
+                </Node>
+                <Node name="DependencyResolution" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ThePreferenceApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Api.ThePreference.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

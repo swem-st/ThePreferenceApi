@@ -8,6 +8,7 @@
         <RootNamespace>ThePreference.Api</RootNamespace>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'ThePreferenceApi' " />
     <ItemGroup>
       <Folder Include="Config__not last name" />
       <Folder Include="Helpers" />
@@ -15,7 +16,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Core\ThePreference.Core.Application\ThePreference.Core.Application.csproj" />
-      <ProjectReference Include="..\..\Core\ThePreference.Core.Domain\ThePreference.Core.Domain.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\ThePreference.Infrastructure.Repository\ThePreference.Infrastructure.Repository.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
     </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "wqI3GbMivolmYnn17eaBKiVaKYuxCBSBnFZPQXP8moo=",
-  "Source": "ThePreferenceApi",
-  "BasePath": "_content/ThePreferenceApi",
+  "Hash": "8oEbXDyf59pzkhDX1OMG6CmhjmvEBo2RVcBDxRPbWpk=",
+  "Source": "ThePreference.Api",
+  "BasePath": "_content/ThePreference.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
