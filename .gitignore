@@ -1,0 +1,36 @@
+# Visual Studio files
+.vs/
+*.sln.docstates
+
+# Build output
+/bin/
+/obj/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# User-specific files
+*.user
+*.userprefs
+*.suo
+*.sln.ide
+*.sln.ide-shm
+*.sln.ide-wal
+*.sln.dotsettings
+
+# Entity Framework
+*/Migrations/*.cs
+*/Migrations/*.Designer.cs
+*/Migrations/*.resx
+*_EFModelSnapshot.cs
+*_EFModelSnapshot.Designer.cs
+*_EFModelSnapshotModelBuilder.cs
+*.edmx
+*.tt
+
+# Others
+/.idea/
+/.vscode/
+/Thumbs.db
+.DS_Store
