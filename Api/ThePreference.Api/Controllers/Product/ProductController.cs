@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using ThePreference.Application.DTO.ProductModels.Request;
-using ThePreference.Application.DTO.ProductModels.Response;
 
 namespace ThePreference.Api.Controllers.Product;
 

@@ -19,4 +19,12 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\ThePreference.Core.Application\ThePreference.Core.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Repositories\Product\" />
+    </ItemGroup>
+
 </Project>

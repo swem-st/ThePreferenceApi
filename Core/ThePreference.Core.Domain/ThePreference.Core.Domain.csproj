@@ -9,7 +9,10 @@
 
     <ItemGroup>
       <Folder Include="Account" />
-        <Folder Include="Product" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CSharpFunctionalExtensions" Version="2.39.0" />
     </ItemGroup>
 
 </Project>

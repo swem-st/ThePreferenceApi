@@ -1,15 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using ThePreference.Infrastructure.Repository.DataModels;
+using ThePreference.Infrastructure.Repository.DataModels.User;
 
 namespace ThePreference.Infrastructure.Repository.DataAccess;
 
-public class PeopleContext : DbContext
+public class UserContext : DbContext
 {
     // public PeopleContext()
     // {
     // }
     
-    public PeopleContext(DbContextOptions options) : base(options)
+    public UserContext(DbContextOptions<UserContext> options) : base(options)
     {
         //--startup-project ThePreference.Api --verbos 
     }
@@ -22,7 +23,7 @@ public class PeopleContext : DbContext
     //     }
     // }
     
-    public DbSet<Person> People { get; set; }
-    public DbSet<Address> Addresses { get; set; }
+    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<AddressEntity> Addresses { get; set; }
 }
  

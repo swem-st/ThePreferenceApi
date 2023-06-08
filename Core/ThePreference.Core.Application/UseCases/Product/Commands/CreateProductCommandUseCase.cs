@@ -22,7 +22,6 @@ public class CreateProductCommandUseCase: IRequestHandler<CreateProductRequestMo
     public async Task<Response<Guid>> Handle(CreateProductRequestModel request, CancellationToken cancellationToken)
     {
         var result = Create(
-            new Guid(),
             request.Name,
             request.Title,
             request.Description,

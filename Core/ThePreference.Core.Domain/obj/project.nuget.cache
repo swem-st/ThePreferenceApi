@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9YLhB8rlwidPlk9foNM+6+wiwYKWhes8WyIk0PxOqAQB3oQOBMTkAv4SbJPsmWnYclf1K8qDkXMyudnl53KTNg==",
+  "dgSpecHash": "5zWuH0HMbbK7+Yg/mszSx3sbuFrhHUIC/FGl7K33m4p9Ukmu5orNL7NNxJxESYWNajZXGsnfPPqyS0qpNSe+WQ==",
   "success": true,
   "projectFilePath": "/Users/swem.st/Documents/ThePreference/ThePreferenceApi/Core/ThePreference.Core.Domain/ThePreference.Core.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/swem.st/.nuget/packages/csharpfunctionalextensions/2.39.0/csharpfunctionalextensions.2.39.0.nupkg.sha512"
+  ],
   "logs": []
 }

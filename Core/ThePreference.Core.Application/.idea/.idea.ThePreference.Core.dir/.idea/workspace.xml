@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="772bc9a7-202c-4b09-8f13-f8d8e937b1e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Api/ThePreference.Api/ThePreference.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Api/ThePreference.Api/ThePreference.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Api/ThePreference.Api/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Api/ThePreference.Api/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThePreference.Api/obj/ThePreference.Api.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThePreference.Api/obj/ThePreference.Api.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThePreference.Api/obj/ThePreference.Api.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThePreference.Api/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ThePreference.Api/obj/project.nuget.cache" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2PBjQs74dui7zKwJjzGBxAb9H3E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="772bc9a7-202c-4b09-8f13-f8d8e937b1e1" name="Changes" comment="" />
+      <created>1682937355446</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682937355446</updated>
+      <workItem from="1682937356757" duration="3000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
