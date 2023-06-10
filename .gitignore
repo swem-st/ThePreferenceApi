@@ -1,14 +1,14 @@
+# Build output
+bin/
+obj/
+
 # Visual Studio files
 .vs/
 *.sln.docstates
 
-# Build output
-/bin/
-/obj/
-
 # NuGet packages
 *.nupkg
-packages/
+**/packages/
 
 # User-specific files
 *.user
@@ -19,10 +19,21 @@ packages/
 *.sln.ide-wal
 *.sln.dotsettings
 
+# Ignore Resharper files
+_ReSharper*/
+*.resharper
+*.resharper.user
+
+# Ignore build output
+[Bb]uild/
+
 # Entity Framework
-*/Migrations/*.cs
-*/Migrations/*.Designer.cs
-*/Migrations/*.resx
+**/Migrations/*.cs
+**/Migrations/*.resx
+**/Migrations/*.Designer.cs
+**/ModelSnapshot.cs
+**/Migrations/
+
 *_EFModelSnapshot.cs
 *_EFModelSnapshot.Designer.cs
 *_EFModelSnapshotModelBuilder.cs
@@ -30,7 +41,8 @@ packages/
 *.tt
 
 # Others
-/.idea/
+.idea/
 /.vscode/
 /Thumbs.db
 .DS_Store
+*.[Cc]ache
