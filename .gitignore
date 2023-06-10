@@ -1,10 +1,10 @@
-# Visual Studio files
-.vs/
-*.sln.docstates
-
 # Build output
 bin/
 obj/
+
+# Visual Studio files
+.vs/
+*.sln.docstates
 
 # NuGet packages
 *.nupkg
