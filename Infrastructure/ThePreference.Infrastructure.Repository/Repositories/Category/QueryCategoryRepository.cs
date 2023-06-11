@@ -32,4 +32,17 @@ public class QueryCategoryRepository: IQueryCategoryRepository
 
         return Result.Success(categoryEntity);
     }
+
+    public async Task<Result<List<CategoryDomain>>> GetAllCategories()
+    {
+        var categoryEntities = await _productContext.Categories.AsNoTracking()
+            .Select(category => new CategoryDomain
+            {
+                Id = category.Id,
+                Name = category.Name
+            })
+            .ToListAsync();
+
+        return Result.Success(categoryEntities);
+    }
 }
