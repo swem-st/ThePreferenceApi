@@ -29,6 +29,27 @@ public class CategoryController: BaseApiController
         }
     }
     
+    [HttpGet("get-all-category")]
+    public async Task<IActionResult> FetchAllCategory()
+    {
+        try
+        {
+            (bool isSuccess, bool isFailure, var value, string error) =
+                await Mediator.Send(new GetAllCategoryRequestModel());
+            
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, value, !isSuccess ? error : string.Empty);
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"I'm afraid we can't fetch all category. Error: {ex}");
+        }
+    }
+    
     [HttpPost]
     public async Task<IActionResult> CreateCategory(CreateCategoryRequestModel createCategoryRequestModel)
     {

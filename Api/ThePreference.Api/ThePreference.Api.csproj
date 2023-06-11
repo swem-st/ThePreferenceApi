@@ -10,7 +10,7 @@
 
     <PropertyGroup Condition=" '$(RunConfiguration)' == 'ThePreferenceApi' " />
     <ItemGroup>
-      <Folder Include="Config__not last name" />
+      <Folder Include="Config\" />
       <Folder Include="Helpers" />
     </ItemGroup>
 

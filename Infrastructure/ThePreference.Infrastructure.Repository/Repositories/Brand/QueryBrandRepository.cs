@@ -36,4 +36,17 @@ public class QueryBrandRepository : IQueryBrandRepository
 
         return Result.Success(brandEntity);
     }
+
+    public async Task<Result<List<BrandDomain>>> GetAllBrands()
+    {
+        var brandEntities = await _productContext.Brands.AsNoTracking()
+            .Select(brand => new BrandDomain
+            {
+                Id = brand.Id,
+                Name = brand.Name
+            })
+            .ToListAsync();
+
+        return Result.Success(brandEntities);
+    }
 }

@@ -29,6 +29,27 @@ public class BrandController: BaseApiController
         }
     }
     
+    [HttpGet("get-all-brand")]  
+    public async Task<IActionResult> FetchAllBrand()
+    {
+        try
+        {
+            (bool isSuccess, bool isFailure, var value, string error) = 
+                await Mediator.Send(new GetAllBrandRequestModel());
+            
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, value, !isSuccess ? error : string.Empty);
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"I'm afraid we can't fetch all brands. Error: {ex}");
+        }
+    }
+    
     [HttpPost]
     public async Task<IActionResult> CreateBrand(CreateBrandRequestModel createBrandRequestModel)
     {

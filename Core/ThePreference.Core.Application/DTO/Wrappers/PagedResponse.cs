@@ -1,4 +1,6 @@
-﻿namespace ThePreference.Application.DTO.Wrappers
+﻿using ThePreference.Application.DTO.Wrappers;
+
+namespace ThePreference.Core.Application.DTO.Wrappers
 {
     public class PagedResponse<T> : Response<T>
     {

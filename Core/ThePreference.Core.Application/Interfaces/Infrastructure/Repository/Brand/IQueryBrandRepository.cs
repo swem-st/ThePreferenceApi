@@ -5,4 +5,5 @@ namespace ThePreference.Core.Application.Interfaces.Infrastructure.Repository.Br
 public interface IQueryBrandRepository
 {
     Task<Result<Domain.Product.Brand>> GetBrand(Guid id);
+    Task<Result<List<Domain.Product.Brand>>> GetAllBrands();
 }

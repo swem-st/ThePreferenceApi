@@ -2,6 +2,7 @@ using MediatR;
 using ThePreference.Application.DTO.ProductModels.Request;
 using ThePreference.Application.DTO.ProductModels.Response;
 using ThePreference.Application.DTO.Wrappers;
+using ThePreference.Core.Application.DTO.Wrappers;
 
 namespace ThePreference.Application.UseCases.Product.Queries;
 
