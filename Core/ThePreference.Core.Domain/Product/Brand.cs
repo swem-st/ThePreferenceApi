@@ -6,15 +6,16 @@ public class Brand
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
-    
+
+    public bool IsDeleted { get; set; }
+
     private static string? ErrorMessage {get; set;}
     
     public static Result<Brand> Create(string name)
     {
         var result = new Brand
         {
-            Id = Guid.NewGuid(),
-            Name = name
+            Name = name.ToLower().Trim()
         };
         
         var isValid = Validate(result);
@@ -32,10 +33,10 @@ public class Brand
         var result = new Brand
         {
             Id = id,
-            Name = name
+            Name = name.ToLower().Trim()
         };
         
-        var isValid = Validate(result);
+        var isValid = Validate(result, true);
 
         if (!isValid)
         { 
@@ -45,9 +46,9 @@ public class Brand
         return Result.Success(result);
     }
     
-    private static bool Validate(Brand brand)
+    private static bool Validate(Brand brand, bool isUpdate = false)
     {
-        if (brand.Id == Guid.Empty)
+        if(isUpdate && brand.Id == Guid.Empty)
         {
             ErrorMessage = $"{nameof(brand.Id)} cannot be null or empty";
             return false;

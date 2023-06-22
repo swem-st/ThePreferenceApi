@@ -1,7 +1,8 @@
+using ThePreference.Core.Application.DTO.CategoryModels.Request;
+
 namespace ThePreference.Core.Application.DTO.CategoryModels.Response;
 
-public class CategoryResponseModel
+public class CategoryResponseModel: CategoryDTO
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; } = null!;
+
 }

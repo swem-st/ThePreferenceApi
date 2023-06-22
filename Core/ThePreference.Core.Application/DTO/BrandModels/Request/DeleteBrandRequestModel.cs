@@ -10,5 +10,5 @@ public class DeleteBrandRequestModel: IRequest<Result>
         Id = brandId;
     }
     
-    public Guid Id { get; }
+    public Guid Id { get; set; }
 }

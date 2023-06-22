@@ -2,7 +2,7 @@ using CSharpFunctionalExtensions;
 using Microsoft.AspNetCore.Mvc;
 using ThePreference.Core.Application.DTO.BrandModels.Request;
 
-namespace ThePreference.Api.Controllers.Brand;
+namespace ThePreference.Api.Controllers.Product;
 
 [Route("api/brand/")]
 [ApiController]
@@ -29,13 +29,13 @@ public class BrandController: BaseApiController
         }
     }
     
-    [HttpGet("get-all-brand")]  
-    public async Task<IActionResult> FetchAllBrand()
+    [HttpGet("get-all")]  
+    public async Task<IActionResult> FetchAllBrands()
     {
         try
         {
             (bool isSuccess, bool isFailure, var value, string error) = 
-                await Mediator.Send(new GetAllBrandRequestModel());
+                await Mediator.Send(new GetAllBrandsRequestModel());
             
             if (isFailure)
             {

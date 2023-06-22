@@ -25,7 +25,8 @@ public class QueryBrandRepository : IQueryBrandRepository
             .Select(brand => new BrandDomain
             {
                 Id = brand.Id,
-                Name = brand.Name
+                Name = brand.Name,
+                IsDeleted = brand.IsDeleted
             })
             .FirstOrDefaultAsync(brand => brand.Id == id);
 
@@ -43,7 +44,8 @@ public class QueryBrandRepository : IQueryBrandRepository
             .Select(brand => new BrandDomain
             {
                 Id = brand.Id,
-                Name = brand.Name
+                Name = brand.Name,
+                IsDeleted = brand.IsDeleted
             })
             .ToListAsync();
 

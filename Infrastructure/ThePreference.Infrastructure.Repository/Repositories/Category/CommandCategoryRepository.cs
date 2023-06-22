@@ -21,20 +21,28 @@ public class CommandCategoryRepository : ICommandCategoryRepository
         _mapper = mapper;
     }
 
-    public async Task<Result>  CreateCategory (CategoryDomain request)
+    public async Task<Result> CreateCategory(CategoryDomain request)
     {
-        var existingCategory = _productContext.Categories
+        var existingCategory = await _productContext.Categories
             .AsNoTracking()
-            .FirstOrDefault(category => category.Name == request.Name);
-        
+            .FirstOrDefaultAsync(category => category.Name == request.Name);
+
         if (existingCategory != null)
         {
+            if (existingCategory.IsDeleted)
+            {
+                existingCategory.IsDeleted = false;
+                _productContext.Categories.Update(existingCategory);
+                await _productContext.SaveChangesAsync();
+                return Result.Success(request.Name);
+            }
+
             return Result.Failure<String>($"{nameof(Category)} with name: '{request.Name}' already exist.");
         }
-        
+
         var categoryEntity = _mapper.Map<CategoryEntity>(request);
-        
         await _productContext.Categories.AddAsync(categoryEntity);
+        
         await _productContext.SaveChangesAsync();
         return Result.Success(request.Name);
     }
@@ -42,38 +50,43 @@ public class CommandCategoryRepository : ICommandCategoryRepository
     public async Task<Result> UpdateCategory(CategoryDomain request)
     {
         var existingCategory = await _productContext.Categories
-            .AsNoTracking()
-            .FirstOrDefaultAsync(category => category.Id == request.Id);
-        
+            .FirstOrDefaultAsync(category => category.Id == request.Id && !category.IsDeleted);
+
         if (existingCategory == null)
         {
             return Result.Failure($"{nameof(Category)} with Id: '{request.Id}' does not exist.");
         }
-        
+
         var categoryWithSameName = await _productContext.Categories
             .AsNoTracking()
             .FirstOrDefaultAsync(category => category.Name == request.Name && category.Id != request.Id);
-        
+
         if (categoryWithSameName != null)
         {
-            return Result.Failure($"{nameof(Category)} with name: '{request.Name}' already exist.");
+            var error = categoryWithSameName.IsDeleted
+                ? "have been removed, please restore it first"
+                : "already exist!";
+
+            return Result.Failure($"{nameof(Category)} with name: '{request.Name}' {error}.");
         }
-        
-        existingCategory = _mapper.Map<CategoryEntity>(request);
-        
+
+        _mapper.Map(request, existingCategory);
+
         _productContext.Categories.Update(existingCategory);
         await _productContext.SaveChangesAsync();
         return Result.Success(request.Name);
     }
-    
+
     public async Task<Result> DeleteCategory(Guid categoryId)
     {
-        var existingCategory = await _productContext.Categories.FirstOrDefaultAsync(category => category.Id == categoryId);
+        var existingCategory =
+            await _productContext.Categories.FirstOrDefaultAsync(category =>
+                category.Id == categoryId && !category.IsDeleted);
         if (existingCategory == null)
         {
             return Result.Failure($"{nameof(Category)} with Id: '{categoryId}' does not exist.");
         }
-        
+
         _productContext.Categories.Remove(existingCategory);
         await _productContext.SaveChangesAsync();
         return Result.Success(existingCategory.Name);

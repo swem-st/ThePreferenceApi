@@ -1,4 +1,5 @@
 using AutoMapper;
+using ThePreference.Core.Application.DTO.BrandModels;
 using ThePreference.Core.Application.DTO.BrandModels.Response;
 using ThePreference.Domain.Product;
 
@@ -9,5 +10,6 @@ public class BrandDTOMapper: Profile
     public BrandDTOMapper()
     {
         CreateMap<Brand, BrandResponseModel>();
+        CreateMap<Brand, BrandDTO>();
     }
 }

@@ -2,7 +2,7 @@ using CSharpFunctionalExtensions;
 using Microsoft.AspNetCore.Mvc;
 using ThePreference.Core.Application.DTO.CategoryModels.Request;
 
-namespace ThePreference.Api.Controllers.Category;
+namespace ThePreference.Api.Controllers.Product;
 
 [Route("api/category/")]
 [ApiController]
@@ -29,13 +29,13 @@ public class CategoryController: BaseApiController
         }
     }
     
-    [HttpGet("get-all-category")]
-    public async Task<IActionResult> FetchAllCategory()
+    [HttpGet("get-all")]
+    public async Task<IActionResult> FetchAllCategories()
     {
         try
         {
             (bool isSuccess, bool isFailure, var value, string error) =
-                await Mediator.Send(new GetAllCategoryRequestModel());
+                await Mediator.Send(new GetAllCategoriesRequestModel());
             
             if (isFailure)
             {

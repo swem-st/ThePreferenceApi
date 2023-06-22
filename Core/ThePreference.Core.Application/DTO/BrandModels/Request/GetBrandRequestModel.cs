@@ -11,5 +11,5 @@ public class GetBrandRequestModel: IRequest<Result<BrandResponseModel>>
         Id = brandId;
     }
     
-    public Guid Id { get; }
+    public Guid Id { get; set; }
 }

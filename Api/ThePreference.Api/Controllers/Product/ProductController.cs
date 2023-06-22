@@ -1,5 +1,6 @@
+using CSharpFunctionalExtensions;
 using Microsoft.AspNetCore.Mvc;
-using ThePreference.Application.DTO.ProductModels.Request;
+using ThePreference.Core.Application.DTO.ProductModels.Request;
 
 namespace ThePreference.Api.Controllers.Product;
 
@@ -8,34 +9,87 @@ namespace ThePreference.Api.Controllers.Product;
 [ApiController]
 public class ProductController: BaseApiController
 {
-    [HttpGet("get-products-by-category/{categoryId:guid}")]
-    public async Task<IActionResult> FetchProducts(Guid categoryId)
-    {
-        try
-        {
-            var result =await Mediator.Send(new GetProductsByCategoryRequestModel(categoryId));
-            
-            return this.Ok(result);
-        }
-        catch (Exception ex)
-        { 
-            
-            throw new HttpRequestException("I'm afraid we can't fetch the list of product");
-        }
-    }
-    
-    [HttpGet("product-by-id/{productId:guid}")]
+    [HttpGet("{productId:guid}")]
     public async Task<IActionResult> FetchProduct(Guid productId)
     {
         try
         {
-            var result =await Mediator.Send(new GetProductRequestModel(productId));
+            (bool isSuccess, bool isFailure, var value, string error) =
+                await Mediator.Send(new GetProductRequestModel(productId));
             
-            return this.Ok(result);
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, value, !isSuccess ? error : string.Empty);
         }
         catch (Exception ex)
         {
-            throw new HttpRequestException("I'm afraid we can't fetch the product");
+            throw new HttpRequestException($"I'm afraid we can't fetch the product. Error: {ex}");
+        }
+    }
+    
+    [HttpGet("get-all")]
+    public async Task<IActionResult> FetchAllProducts()
+    {
+        try
+        {
+            (bool isSuccess, bool isFailure, var value, string error) =
+                await Mediator.Send(new GetAllProductsRequestModel());
+            
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, value, !isSuccess ? error : string.Empty);
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"I'm afraid we can't fetch all products. Error: {ex}");
+        }
+    }
+    
+    [HttpGet("get-by-brand/{brandId:guid}")]
+    public async Task<IActionResult> FetchProductsByBrand(Guid brandId)
+    {
+        try
+        {
+            (bool isSuccess, bool isFailure, var value, string error) =
+                await Mediator.Send(new GetProductsByBrandRequestModel(brandId));
+            
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, value, !isSuccess ? error : string.Empty);
+        }
+        catch (Exception ex)
+        { 
+            throw new HttpRequestException($"I'm afraid we can't fetch products by brand. Error: {ex}");
+        }
+    }
+    
+    [HttpGet("get-by-category/{categoryId:guid}")]
+    public async Task<IActionResult> FetchProductsByCategory(Guid categoryId)
+    {
+        try
+        {
+            (bool isSuccess, bool isFailure, var value, string error) =
+                await Mediator.Send(new GetProductsByCategoryRequestModel(categoryId));
+            
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, value, !isSuccess ? error : string.Empty);
+        }
+        catch (Exception ex)
+        {
+            throw new HttpRequestException($"I'm afraid we can't fetch products by category. Error: {ex}");
         }
     }
     
@@ -44,13 +98,18 @@ public class ProductController: BaseApiController
     {
         try
         {
-            var result =await Mediator.Send(createProductRequestModel);
+            (bool isSuccess, bool isFailure, string error) = await Mediator.Send(createProductRequestModel);
+           
+            if (isFailure)
+            {
+                //logger
+            }
             
-            return Ok(result);
+            return HandleResult(isSuccess, isSuccess, !isSuccess ? error : string.Empty);
         }
         catch (Exception ex)
         {
-            throw new HttpRequestException("I'm afraid we can't fetch the product");
+            throw new HttpRequestException($"I'm afraid we can't create the product. Error: {ex}");
         }
     }
     
@@ -59,28 +118,38 @@ public class ProductController: BaseApiController
     {
         try
         {
-            var result =await Mediator.Send(updateProductRequestModel);
+            (bool isSuccess, bool isFailure, string error) = await Mediator.Send(updateProductRequestModel);
             
-            return this.Ok(result);
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, isSuccess, !isSuccess ? error : string.Empty);
         }
         catch (Exception ex)
         {
-            throw new HttpRequestException("I'm afraid we can't fetch the product");
+            throw new HttpRequestException($"I'm afraid we can't update the product. Error: {ex}");
         }
     }
     
-    [HttpDelete("product-by-id/{productId:guid}")]
+    [HttpDelete("{productId:guid}")]
     public async Task<IActionResult> DeleteProduct(Guid productId)
     {
         try
         {
-            var result =await Mediator.Send(new DeleteProductRequestModel(productId));
+            (bool isSuccess, bool isFailure, string error) = await Mediator.Send(new DeleteProductRequestModel(productId));
             
-            return Ok(result);
+            if (isFailure)
+            {
+                //logger
+            }
+            
+            return HandleResult(isSuccess, isSuccess, !isSuccess ? error : string.Empty);
         }
         catch (Exception ex)
         {
-            throw new HttpRequestException("I'm afraid we can't fetch the product");
+            throw new HttpRequestException($"I'm afraid we can't remove the product. Error: {ex}");
         }
     }
 }

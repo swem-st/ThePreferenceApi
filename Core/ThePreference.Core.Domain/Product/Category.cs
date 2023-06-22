@@ -6,6 +6,7 @@ public class Category
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
+    public bool IsDeleted { get; set; }
     
     private static string? ErrorMessage {get; set;}
     
@@ -13,8 +14,7 @@ public class Category
     {
         var result = new Category
         {
-            Id = Guid.NewGuid(),
-            Name = name
+            Name = name.ToLower().Trim()
         };
         
         var isValid = Validate(result);
@@ -32,10 +32,10 @@ public class Category
         var result = new Category
         {
             Id = id,
-            Name = name
+            Name = name.ToLower().Trim()
         };
         
-        var isValid = Validate(result);
+        var isValid = Validate(result, true);
 
         if (!isValid)
         { 
@@ -45,11 +45,11 @@ public class Category
         return Result.Success(result);
     }
     
-    private static bool Validate(Category category)
+    private static bool Validate(Category category, bool isUpdate = false)
     {
-        if (category.Id == Guid.Empty)
-        {
-            ErrorMessage = $"{nameof(category.Id)} cannot be null or empty";
+        if (isUpdate && category.Id == Guid.Empty)
+        { 
+            ErrorMessage = $"{nameof(category.Id)} cannot be empty";
             return false;
         }
         

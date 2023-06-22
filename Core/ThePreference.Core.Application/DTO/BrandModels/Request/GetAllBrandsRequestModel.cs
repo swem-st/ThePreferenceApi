@@ -4,7 +4,7 @@ using ThePreference.Core.Application.DTO.BrandModels.Response;
 
 namespace ThePreference.Core.Application.DTO.BrandModels.Request;
 
-public class GetAllBrandRequestModel: IRequest<Result<List<BrandResponseModel>>>
+public class GetAllBrandsRequestModel: IRequest<Result<List<BrandResponseModel>>>
 {
     
 }

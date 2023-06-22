@@ -1,16 +1,15 @@
+using CSharpFunctionalExtensions;
 using MediatR;
-using ThePreference.Application.DTO.ProductModels.Response;
-using ThePreference.Application.DTO.Wrappers;
-using ThePreference.Core.Application.DTO.Wrappers;
+using ThePreference.Core.Application.DTO.ProductModels.Response;
 
-namespace ThePreference.Application.DTO.ProductModels.Request;
+namespace ThePreference.Core.Application.DTO.ProductModels.Request;
 
-public class GetProductsByCategoryRequestModel: IRequest<PagedResponse<ProductResponseModel>>
+public class GetProductsByCategoryRequestModel: IRequest<Result<List<ProductResponseModel>>>
 {
    public GetProductsByCategoryRequestModel(Guid categoryId)
    {
       CategoryId = categoryId;
    }
    
-   public Guid CategoryId { get; } 
+   public Guid CategoryId { get; set; } 
 }

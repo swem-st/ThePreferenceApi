@@ -2,10 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ThePreference.Infrastructure.Repository.DataModels.Product;
 
-public class BrandEntity
+public class BrandEntity: BaseEntity
 {
-    public Guid Id { get; set; }
-    
     [Required]
     [MaxLength(100)]
     public string Name { get; set; } = null!;

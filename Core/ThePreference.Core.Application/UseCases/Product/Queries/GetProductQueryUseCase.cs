@@ -1,27 +1,38 @@
+using AutoMapper;
+using CSharpFunctionalExtensions;
 using MediatR;
-using ThePreference.Application.DTO.ProductModels.Request;
-using ThePreference.Application.DTO.ProductModels.Response;
-using ThePreference.Application.DTO.Wrappers;
+using ThePreference.Core.Application.DTO.ProductModels.Request;
+using ThePreference.Core.Application.DTO.ProductModels.Response;
+using ThePreference.Core.Application.Interfaces.Infrastructure.Repository.Product;
 
-namespace ThePreference.Application.UseCases.Product.Queries;
+namespace ThePreference.Core.Application.UseCases.Product.Queries;
 
-public class GetProductQueryUseCase: IRequestHandler<GetProductRequestModel, Response<ProductResponseModel>>
+public class GetProductQueryUseCase: IRequestHandler<GetProductRequestModel, Result<ProductResponseModel>>
 {
-    //private readonly IProductRepository _productRepository;
-    // private readonly IMapper _mapper;
-    // public GetProductByIdQueryUseCase(IProductRepository productRepository, IMapper mapper)
-    // {
-    //     _productRepository = productRepository;
-    //     _mapper = mapper;
-    // }
-    public GetProductQueryUseCase()
-    {
-        
-    }
+    private readonly IQueryProductRepository _queryProductRepository;
+    private readonly IMapper _mapper;
     
-    public async Task<Response<ProductResponseModel>> Handle(GetProductRequestModel request, CancellationToken cancellationToken)
+    public GetProductQueryUseCase(IQueryProductRepository queryProductRepository, IMapper mapper)
     {
-        //var userObject = (await _userRepository.FindByCondition(x => x.UserId.Equals(request.UserId)).ConfigureAwait(false)).AsQueryable().FirstOrDefault();
-        return new Response<ProductResponseModel>();
+        _queryProductRepository = queryProductRepository;
+        _mapper = mapper;
+    }
+
+    public async Task<Result<ProductResponseModel>> Handle(GetProductRequestModel request, CancellationToken cancellationToken)
+    {
+        if (request.Id == Guid.Empty)
+        {
+            return Result.Failure<ProductResponseModel>("Product Id cannot be empty");
+        }
+        
+        var product = await _queryProductRepository.GetProduct(request.Id);
+        
+        if (product.IsFailure)
+        {
+            return Result.Failure<ProductResponseModel>(product.Error);
+        }
+        
+        var result = _mapper.Map<ProductResponseModel>(product.Value);
+        return result;
     }
 }

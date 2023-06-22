@@ -21,7 +21,8 @@ public class QueryCategoryRepository: IQueryCategoryRepository
             .Select(category => new CategoryDomain
             {
                 Id = category.Id,
-                Name = category.Name
+                Name = category.Name,
+                IsDeleted = category.IsDeleted
             })
             .FirstOrDefaultAsync(category => category.Id == id);
 
@@ -39,7 +40,8 @@ public class QueryCategoryRepository: IQueryCategoryRepository
             .Select(category => new CategoryDomain
             {
                 Id = category.Id,
-                Name = category.Name
+                Name = category.Name,
+                IsDeleted = category.IsDeleted
             })
             .ToListAsync();
 

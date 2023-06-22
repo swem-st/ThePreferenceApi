@@ -8,6 +8,6 @@ public class BrandMapper: Profile
 {
     public BrandMapper()
     {
-        CreateMap<Brand, BrandEntity>();
+        CreateMap<Brand, BrandEntity>().ReverseMap();
     }
 }

@@ -11,5 +11,5 @@ public class GetCategoryRequestModel: IRequest<Result<CategoryResponseModel>>
         Id = categoryId;
     }
     
-    public Guid Id { get; }
+    public Guid Id { get; set; }
 }

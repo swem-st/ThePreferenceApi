@@ -1,13 +1,14 @@
+using CSharpFunctionalExtensions;
 using MediatR;
-using ThePreference.Application.DTO.Wrappers;
-namespace ThePreference.Application.DTO.ProductModels.Request;
 
-public class DeleteProductRequestModel: IRequest<Response<Guid>>
+namespace ThePreference.Core.Application.DTO.ProductModels.Request;
+
+public class DeleteProductRequestModel: IRequest<Result>
 {
     public DeleteProductRequestModel(Guid productId)
     {
-        ProductId = productId;
+        Id = productId;
     }
     
-    public Guid ProductId { get; }
+    public Guid Id { get; set; }
 }

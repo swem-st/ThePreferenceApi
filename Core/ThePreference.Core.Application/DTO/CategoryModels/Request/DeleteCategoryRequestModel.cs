@@ -10,5 +10,5 @@ public class DeleteCategoryRequestModel: IRequest<Result>
         Id = categoryId;
     }
     
-    public Guid Id { get; }
+    public Guid Id { get; set; }
 }
